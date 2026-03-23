@@ -3,7 +3,7 @@
 
 //
 
-export const baseURL = "http://pmsclmsadmin.tgastaging.com/api/";
+export const baseURL = "https://pmsclmsadmin.tgastaging.com/api/";
 
 //
 export const KEYS = {
