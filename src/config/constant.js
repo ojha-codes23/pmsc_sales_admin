@@ -1,8 +1,3 @@
-//base url
-//
-
-//
-
 export const baseURL = "https://pmsclmsadmin.tgastaging.com/api/";
 
 //

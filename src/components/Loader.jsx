@@ -5,7 +5,7 @@ export const Loader = ({ size = "md", overlay = false, visible }) => {
   const sizeClass =
     size === "lg" ? "loader-lg" : size === "sm" ? "loader-sm" : "loader";
 
-  const loaderHtml = <div className={sizeClass}></div>;
+  const loaderHtml = <div style={{zIndex:'999999999'}} className={sizeClass}></div>;
 
   // If overlay is true, wrap it in the full-screen dim container
   if (overlay) {

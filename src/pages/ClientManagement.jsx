@@ -56,7 +56,7 @@ function ClientManagement() {
   });
 
   setFilteredClient(filtered);
-  setCurrentPage(1);
+  setCurrentPage(currentPage);
 
 }, [searchTerm, clientData]);
 
@@ -206,72 +206,71 @@ function ClientManagement() {
                 })} */}
                 
                 {currentItems && currentItems.length > 0 ? (
-  currentItems.map((client, index) => {
-    return (
-      <tr key={index}>
-        <td>{client?.name || "N/A"}</td>
-        <td>{client?.email || "N/A"}</td>
-        <td>{client?.school_name || "N/A"}</td>
-        <td>{client?.experience}</td>
-        <td>{client?.department}</td>
-        <td>
-          <div className="access-wrp">
-            <div className="form-check form-switch">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                role="switch"
-                id={`switch-${client.id}-${index}`}
-                checked={client?.status === 1}
-                onChange={() => handleStatusChange(client.id, client.status)}
-              />
-              <label
-                className="form-check-label"
-                htmlFor={`switch-${client.id}-${index}`}
-              >
-                {client?.status === 1 ? "Active" : "Disabled"}
-              </label>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div className="manage-sub-cta">
-            <button
-              className="add-cta"
-              data-bs-target="#add-client-popup"
-              data-bs-toggle="modal"
-              onClick={() => {
-                setType("edit");
-                setClientId(client?.id);
-              }}
-            >
-              <img src="images/blue-edit.svg" alt="Edit" />
-            </button>
-            <button
-              type="button"
-              data-bs-target="#delete-popup"
-              data-bs-toggle="modal"
-              onClick={() => {
-                setClientId(client?.id);
-                setShowDeletePopup(true);
-              }}
-            >
-              <img src="images/delete-icon.svg" alt="Delete" />
-            </button>
-          </div>
-        </td>
-      </tr>
-    );
-  })
-) : (
-  <tr>
-    <td colSpan="7" className="text-center">
-      No clients found
-    </td>
-  </tr>
-)}
-
-              </tbody>
+              currentItems.map((client, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{client?.name || "N/A"}</td>
+                    <td>{client?.email || "N/A"}</td>
+                    <td>{client?.school_name || "N/A"}</td>
+                    <td>{client?.experience}</td>
+                    <td>{client?.department}</td>
+                    <td>
+                      <div className="access-wrp">
+                        <div className="form-check form-switch">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id={`switch-${client.id}-${index}`}
+                            checked={client?.status === 1}
+                            onChange={() => handleStatusChange(client.id, client.status)}
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor={`switch-${client.id}-${index}`}
+                          >
+                            {client?.status === 1 ? "Active" : "Disabled"}
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div className="manage-sub-cta">
+                        <button
+                          className="add-cta"
+                          data-bs-target="#add-client-popup"
+                          data-bs-toggle="modal"
+                          onClick={() => {
+                            setType("edit");
+                            setClientId(client?.id);
+                          }}
+                        >
+                          <img src="images/blue-edit.svg" alt="Edit" />
+                        </button>
+                        <button
+                          type="button"
+                          data-bs-target="#delete-popup"
+                          data-bs-toggle="modal"
+                          onClick={() => {
+                            setClientId(client?.id);
+                            setShowDeletePopup(true);
+                          }}
+                        >
+                          <img src="images/delete-icon.svg" alt="Delete" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : (
+              <tr>
+                <td colSpan="7" className="text-center">
+                  No clients found
+                </td>
+              </tr>
+            )}
+             </tbody>
             </table>
           </div>
 

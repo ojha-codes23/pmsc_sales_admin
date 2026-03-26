@@ -43,7 +43,7 @@ export default function useDashboard() {
     mutationKey: ["get-latest-client", "SalesAdmin"],
     mutationFn: async (payload) => {
       try {
-        setManualLoading(true);
+        // setManualLoading(true);
         const response = await api.get("get-latest-client", payload);
         const { data } = response;
         // const accessToken = data?.user?.token;

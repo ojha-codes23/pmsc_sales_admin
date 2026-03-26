@@ -57,7 +57,7 @@ export default function useClient( searchValue ) {
     mutationKey: ["getClient", "SalesAdmin"],
     mutationFn: async (payload) => {
       try {
-        setManualLoading(true);
+        // setManualLoading(true);
         const response = await api.post("get-client", payload);
         const { data } = response;
 
@@ -107,7 +107,7 @@ export default function useClient( searchValue ) {
     },
     staleTime: 1000 * 60 * 5,
     cacheTime: 1000 * 60 * 10,
-    refetchOnWindowFocus: false,
+    // refetchOnWindowFocus: false,
   });
   //update-Status
 
@@ -169,7 +169,7 @@ const { mutateAsync: updateStatus } = useMutation({
     mutationKey: ["update-client-status", "SalesAdmin"],
     mutationFn: async (payload) => {
       try {
-        setManualLoading(true);
+        // setManualLoading(true);
         const response = await api.post("update-client-status", payload);
         const { data } = response;
 
@@ -180,7 +180,7 @@ const { mutateAsync: updateStatus } = useMutation({
       } catch (error) {
         toast.error(error.message);
       } finally {
-        setManualLoading(false);
+        // setManualLoading(false);
       }
     },
   });

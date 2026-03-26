@@ -25,6 +25,11 @@ function Login() {
   };
 
   const validateForm = () => {
+
+      if(!formData.password?.trim() && !formData.email?.trim()){
+      toast.error("Please enter your email and password");
+      return false;
+    }
     if (!formData.email?.trim()) {
       toast.error("Please enter your email");
       return false;
@@ -33,6 +38,7 @@ function Login() {
       toast.error("Please enter your password");
       return false;
     }
+
     return true;
   };
 
