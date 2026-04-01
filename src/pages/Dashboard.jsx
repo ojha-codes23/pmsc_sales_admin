@@ -25,7 +25,7 @@ function Dashboard() {
   return (
     <> 
 
-    <Loader size="lg" overlay visible={isLoading} />
+    <Loader size="md" overlay visible={isLoading} />
       <main>
         <div className="top-head prog-sco-wrp">
           <div className="top-head-in">

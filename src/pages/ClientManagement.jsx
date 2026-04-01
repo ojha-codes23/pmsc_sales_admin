@@ -14,7 +14,12 @@ function ClientManagement() {
 
   const [isUpdating, setIsUpdating] = useState(false);
   const [clientData, setClientData] = useState(getClientList || []);
-  const [currentPage, setCurrentPage] = useState(1)
+  // const [currentPage, setCurrentPage] = useState()
+  const [currentPage, setCurrentPage] = useState(() => {
+  // Get the last page from localStorage if exists, else 1
+  const savedPage = localStorage.getItem("currentPage");
+  return savedPage ? Number(savedPage) : 1;
+});
   const [filtereClient, setFilteredClient] = useState([]);
   const[type,setType]=useState(null);
   const [client_id,setClientId]=useState(null)
@@ -24,6 +29,8 @@ function ClientManagement() {
   useEffect(() => {
     setClientData(getClientList);
     setFilteredClient(getClientList);
+
+    setCurrentPage(currentPage)
   }, [getClientList]);
 
   // const handleSearchChange = (e) => {
@@ -56,9 +63,17 @@ function ClientManagement() {
   });
 
   setFilteredClient(filtered);
-  setCurrentPage(currentPage);
+
+  if(searchTerm){
+    setCurrentPage(1);
+  }
 
 }, [searchTerm, clientData]);
+
+
+useEffect(() => {
+  localStorage.setItem("currentPage", currentPage);
+}, [currentPage]);
 
 
   const handleStatusChange = async (id, currentStatus) => {

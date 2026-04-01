@@ -14,7 +14,7 @@ export default function useAuth() {
     mutationKey: ["salesAdminLogin", "SalesAdmin"],
     mutationFn: async (payload) => {
       try {
-        setManualLoading(true);
+        // setManualLoading(true);
         const response = await api.post("sales-admin-login", payload);
         const { data } = response;
         const accessToken = data?.user?.token;
@@ -33,7 +33,7 @@ export default function useAuth() {
       } catch (error) {
         toast.error(error.message);
       } finally {
-        setManualLoading(false);
+        // setManualLoading(false);
       }
     },
   });

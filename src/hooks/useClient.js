@@ -68,7 +68,7 @@ export default function useClient( searchValue ) {
       } catch (error) {
         toast.error(error.message);
       } finally {
-        setManualLoading(false);
+        // setManualLoading(false);
       }
     },
   });
@@ -107,7 +107,7 @@ export default function useClient( searchValue ) {
     },
     staleTime: 1000 * 60 * 5,
     cacheTime: 1000 * 60 * 10,
-    // refetchOnWindowFocus: false,
+    refetchOnWindowFocus: false,
   });
   //update-Status
 
@@ -149,7 +149,7 @@ export default function useClient( searchValue ) {
     mutationKey: ["delete-client", "SalesAdmin"],
     mutationFn: async (payload) => {
       try {
-        setManualLoading(true);
+        // setManualLoading(true);
         const response = await api.post("delete-client", payload);
         const { data } = response;
 
