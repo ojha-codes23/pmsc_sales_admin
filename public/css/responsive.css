@@ -37,7 +37,7 @@
     }
 
     .my-subjects-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     #sidebar.hide~#content .my-subjects-grid {
@@ -169,7 +169,7 @@
     }
 
     .personal-info form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     #sidebar.hide~#content .sub-lessons-list-in.drop-btn {
@@ -234,7 +234,7 @@
     }
 
     .my-subjects-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     #sidebar.hide~#content .my-subjects-grid {
@@ -366,7 +366,7 @@
     }
 
     .personal-info form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     #sidebar.hide~#content .sub-lessons-list-in.drop-btn {
@@ -417,11 +417,11 @@
     /* SUPER-ADMIN */
 
     .course-lvl-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     #sidebar.hide~#content .course-lvl-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .options-list-in {
@@ -475,7 +475,7 @@
     }
 
     .add-section-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .district-src-filt-wrp {
@@ -546,7 +546,7 @@
     }
 
     #sidebar.hide~#content .my-subjects-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .my-subjects-grid {
@@ -732,7 +732,7 @@
     }
 
     #sidebar.hide~#content .course-lvl-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .options-list-in {
@@ -786,7 +786,7 @@
     }
 
     .add-section-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .district-src-filt-wrp {
@@ -838,7 +838,7 @@
     }
 
     #sidebar.hide~#content .my-subjects-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .my-subjects-grid {
@@ -977,7 +977,7 @@
     }
 
     .personal-info form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .sub-lessons-list-in.drop-btn {
@@ -1049,7 +1049,7 @@
     }
 
     .add-section-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .district-src-filt-wrp {
@@ -1224,7 +1224,7 @@
     }
 
     #sidebar.hide~#content .personal-info form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1287,7 +1287,7 @@
     }
 
     .add-section-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .district-src-filt-wrp {
@@ -1462,7 +1462,7 @@
     }
 
     #sidebar.hide~#content .personal-info form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
