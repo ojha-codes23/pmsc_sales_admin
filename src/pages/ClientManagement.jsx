@@ -110,7 +110,7 @@ useEffect(() => {
             <p>Organize, track, and manage your clients efficiently.</p>
           </div>
 
-          <div class="influ-dropdown">
+          {/* <div class="influ-dropdown"> */}
             {/* <button class="influ-btn influ-drop-btn" type="button">
 							Client <i class="far fa-chevron-down"></i>
 						</button> */}
@@ -132,7 +132,7 @@ useEffect(() => {
               {/* <button className="search-cta" onClick={handleSearch}>
                 Search
               </button> */}
-            </div>
+            {/* </div> */}
 
             {/* </div> */}
           </div>
