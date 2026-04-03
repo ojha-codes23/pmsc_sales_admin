@@ -767,9 +767,9 @@ function AddEditClient({ type, client_id }) {
                     <div className="col-lg-12">
                       <div className="credentials-in">
                         <div className="form-group mb-4">
-                          <div className="delete-pop-inner my-2 align-items-start"><p>District Admin Username</p></div>
+                          <div className="delete-pop-inner my-2 align-items-start"><p>District Admin Email</p></div>
                           {/* <label className="mb-1">District Admin Username</label> */}
-                          <input type="email" name="district_username" value={formData.district_username} onChange={handleChange} placeholder="Username" />
+                          <input type="email" name="district_username" value={formData.district_username} onChange={handleChange} placeholder="Enter Email Address" />
                           {errors.district_username && <p style={{ color: "red" }}>{errors.district_username}</p>}
                         </div>
                         <div className="form-group district-wrapper mb-4">
@@ -791,9 +791,9 @@ function AddEditClient({ type, client_id }) {
                     <div className="col-lg-12">
                       <div className="credentials-in">
                         <div className="form-group mb-4">
-                          <div className="delete-pop-inner my-2 align-items-start"><p>Teacher Panel Username</p></div>
+                          <div className="delete-pop-inner my-2 align-items-start"><p>Teacher Panel Email</p></div>
                           {/* <label className="mb-1">Teacher Panel Username</label> */}
-                          <input type="email" name="teacher_username" value={formData.teacher_username} onChange={handleChange} placeholder="Username" />
+                          <input type="email" name="teacher_username" value={formData.teacher_username} onChange={handleChange} placeholder="Enter Email Address" />
                           {errors.teacher_username && <p style={{ color: "red" }}>{errors.teacher_username}</p>}
                         </div>
                         <div className="form-group teacher-wrapper mb-4">
